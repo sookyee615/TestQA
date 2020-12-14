@@ -85,7 +85,7 @@ namespace TestQA
 				Console.WriteLine(value1);
 			}
 
-			driver.Close();
+			driver.Quit();
 		}
 	}
 }
