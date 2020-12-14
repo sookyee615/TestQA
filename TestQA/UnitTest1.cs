@@ -77,7 +77,7 @@ namespace TestQA
 			driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
 			IWebElement resultPanel1 = driver.FindElement(By.XPath("//h3[@class='s-item__title']"));
-			IReadOnlyCollection<IWebElement> searchResults1 = resultPanel1.FindElements(By.XPath("./a"));
+			IReadOnlyCollection<IWebElement> searchResults1 = resultPanel1.FindElements(By.TagName("a"));
 
 			foreach (IWebElement result1 in searchResults1)
 			{
@@ -85,7 +85,7 @@ namespace TestQA
 				Console.WriteLine(value1);
 			}
 
-			//driver.Close();
+			driver.Close();
 		}
 	}
 }
